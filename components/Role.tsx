@@ -11,11 +11,10 @@ export default function Role({ role, isFirst = false, sectionLabel }: Props) {
   return (
     <article
       className={[
-        "reveal grid items-start py-[clamp(28px,4.5vh,52px)] md:grid-cols-[1fr_2fr] md:gap-[clamp(40px,6vw,100px)]",
-        "grid-cols-1 gap-4",
-        isFirst ? "border-t-0 pt-0" : "border-t border-ink/100",
+        "reveal grid items-start pb-[clamp(36px,6vh,68px)] md:grid-cols-[1fr_2fr] md:gap-[clamp(40px,6vw,100px)]",
+        "grid-cols-1 gap-4 border-b border-ink/100 last:border-b-0",
+        isFirst ? "pt-0" : "pt-[clamp(20px,3vh,32px)]",
       ].join(" ")}
-      style={!isFirst ? { borderTopWidth: "1px" } : undefined}
     >
       {/* Meta column (sticky on desktop) */}
       <div className="md:sticky md:top-20">
